@@ -6,7 +6,7 @@ const useDarkSide = () => {
   const [theme, setTheme] = useState<localStorageType>(
     localStorage.getItem("theme") ?? "dark"
   );
-  
+
   const colorTheme: string = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
@@ -18,8 +18,8 @@ const useDarkSide = () => {
   }, [theme, colorTheme]);
 
   const toggleTheme = () => {
-    setTheme(colorTheme)
-  }
+    setTheme(colorTheme);
+  };
 
   return [theme, toggleTheme, setTheme] as const;
 };
