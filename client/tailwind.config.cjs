@@ -70,7 +70,71 @@ module.exports = {
           main: "#1f2026",
         },
       },
+      boxShadow: {
+        'dashboard-box-shadow': '0.15rem 0.2rem 0.15rem 0.1rem rgba(0, 0, 0, .8)',
+      },
+      gridTemplateAreas: {
+        'dashboard-layout': [
+          "a b c",
+          "a b c",
+          "a b c",
+          "a b f",
+          "d e f",
+          "d e f",
+          "d h i",
+          "g h i",
+          "g h j",
+          "g h j",
+        ],
+        'dashboard-layout-slim': [
+          "a",
+          "a",
+          "a",
+          "a",
+          "b",
+          "b",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c",
+          "d",
+          "d",
+          "d",
+          "e",
+          "e",
+          "f",
+          "f",
+          "f",
+          "g",
+          "g",
+          "g",
+          "h",
+          "h",
+          "h",
+          "h",
+          "i",
+          "i",
+          "j",
+          "j",
+        ],
+      },
+      gridTemplateColumns: {
+        'dashboard-layout': 'repeat(3, minmax(370px, 1fr))'
+      },
+      gridTemplateRows: {
+        'dashboard-layout': 'repeat(10, minmax(60px, 1fr))',
+      },
+      gridAutoRows: {
+        'dashboard-layout-responsive': '80px'
+      },
+      gridAutoColumns: {
+        'dashboard-layout-responsive': '1fr'
+      }
     },
   },
-  plugins: [],
+  plugins: [require('@savvywombat/tailwindcss-grid-areas')],
+  variants: {
+    gridTemplateAreas: ['responsive']
+  }
 }
