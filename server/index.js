@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+/* ROUTES */
+app.use("/kpi", kpiRoutes);
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 mongoose
