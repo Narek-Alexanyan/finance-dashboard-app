@@ -2,6 +2,7 @@ import DashboardBox from "@/component/dashboard/DashboardBox";
 import Box from "@/component/ui/Box";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import classNames from "@/utils/ClassesUtils";
+import DashboardFirstRow from "./DashboardFirstRow";
 
 type Props = {};
 
@@ -16,9 +17,7 @@ const index = (props: Props) => {
         matches && "grid-cols-dashboard-layout grid-rows-dashboard-layout"
       )}
     >
-      <DashboardBox className="grid-in-a"></DashboardBox>
-      <DashboardBox className="grid-in-b"></DashboardBox>
-      <DashboardBox className="grid-in-c"></DashboardBox>
+      <DashboardFirstRow />
       <DashboardBox className="grid-in-d"></DashboardBox>
       <DashboardBox className="grid-in-e"></DashboardBox>
       <DashboardBox className="grid-in-f"></DashboardBox>

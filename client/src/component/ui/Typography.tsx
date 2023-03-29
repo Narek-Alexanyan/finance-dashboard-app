@@ -1,7 +1,9 @@
+import classNames from "@/utils/ClassesUtils";
 import { ReactNode } from "react";
 
 interface TypographyProps {
   children?: ReactNode;
+  className?: string;
   size?: string;
   weight?: string;
   color?: string;
@@ -14,6 +16,7 @@ interface TypographyProps {
 
 const Typography = ({
   children,
+  className,
   size = "text-base",
   weight = "font-normal",
   color = "text-black dark:text-white",
@@ -29,7 +32,12 @@ const Typography = ({
     : "";
 
   return (
-    <Tag className={`${size} ${weight} ${color} ${responsiveClasses}`}>
+    <Tag
+      className={classNames(
+        `${size} ${weight} ${color} ${responsiveClasses}`,
+        className
+      )}
+    >
       {children}
     </Tag>
   );
